@@ -9,16 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Slider</title>
+    <title>SB Admin 2 - Dashboards</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('asset_backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="{{asset('asset_backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
+
+    
 
 </head>
 
@@ -59,7 +61,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="layanan.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Layanan</span></a>
+                    <span>Service</span></a>
             </li>
             <hr class="sidebar-divider my-0">
 
@@ -69,18 +71,16 @@
                     <span>Blog</span></a>
             </li>
 
+
+
         </ul>
         <!-- End of Sidebar -->
-
-        <!-- content -->
-         
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
-                
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -254,7 +254,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Lutfia</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -283,93 +283,9 @@
 
                     </ul>
 
-                 
                 </nav>
-                <div id="content">
-                    
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-                        </div>
-                        <div class="card-body">
-                            <a href="tambah_slider.html" class="btn btn-primary mb-2">Tambah Slider</a>
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Judul</th>
-                                            <th>Deskripsi</th>
-                                            <th>File</th>
-                                            <th>Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    
-                                    <tbody>
-                                       
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Content 1</td>
-                                            <td>Deskripsi</td>
-                                            <td><img src="" width="200" alt="images"></td>
-                                            <td>
-                                                <a href="" class="btn btn-warning">Edit</a>
-                                                    <form action="{{ route('backend.blog.aksi_hapus', $item->id) }}" method="post" >
-                                                        
-                                                        <button class="btn btn-danger">Hapus</button>
-                                                    </form>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Content 2</td>
-                                            <td>Deskripsi</td>
-                                            <td><img src="" width="200" alt="images"></td>
-                                            <td>
-                                                <a href="" class="btn btn-warning">Edit</a>
-                                                    <form action="{{ route('backend.blog.aksi_hapus', $item->id) }}" method="post" >
-                                                        
-                                                        <button class="btn btn-danger">Hapus</button>
-                                                    </form>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Content 3</td>                                            <td>Deskripsi</td>
-                                            <td>Deskripsi</td>
-                                            <td><img src="" width="200" alt="images"></td>
-                                            <td>
-                                                <a href="" class="btn btn-warning">Edit</a>
-                                                    <form action="{{ route('backend.blog.aksi_hapus', $item->id) }}" method="post" >
-                                                        
-                                                        <button class="btn btn-danger">Hapus</button>
-                                                    </form>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Content 4</td>
-                                            <td>Deskripsi</td>
-                                            <td><img src="" width="200" alt="images"></td>
-                                            <td>
-                                                <a href="" class="btn btn-warning">Edit</a>
-                                                    <form action="{{ route('backend.blog.aksi_hapus', $item->id) }}" method="post" >
-                                                        
-                                                        <button class="btn btn-danger">Hapus</button>
-                                                    </form>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                    
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
                 <!-- End of Topbar -->
-
+                @yield('content')
               
                 <!-- /.container-fluid -->
 
