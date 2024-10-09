@@ -52,21 +52,21 @@
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item">
-                <a class="nav-link" href="slider.html">
+                <a class="nav-link" href="{{route('backend.slider')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Slider</span></a>
             </li>
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item">
-                <a class="nav-link" href="layanan.html">
+                <a class="nav-link" href="{{route('backend.service')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Service</span></a>
             </li>
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item">
-                <a class="nav-link" href="blog.html">
+                <a class="nav-link" href="{{route('backend.blog')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Blog</span></a>
             </li>
