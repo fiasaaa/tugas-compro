@@ -9,7 +9,7 @@
                             <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
                         </div>
                         <div class="card-body">
-                            <a href="tambah_slider.html" class="btn btn-primary mb-2">Tambah Slider</a>
+                            <a href="{{route('backend.slider.tambah')}}" class="btn btn-primary mb-2">Tambah Slider</a>
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>

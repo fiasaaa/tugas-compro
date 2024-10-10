@@ -10,7 +10,12 @@ class SliderController extends Controller
 {
     public function index() {
         $sliders=ModelSlider::get();
-        return view('backend.slider.index',
-    ['sliders'=>$sliders]);
+        return view('backend.slider.index',[ 
+            'sliders'=>$sliders
+        ]);
+    }
+
+    public function tambah(){
+        return view('backend.slider.tambah');
     }
 }

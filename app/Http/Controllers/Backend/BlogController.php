@@ -15,4 +15,8 @@ class BlogController extends Controller
         ]);
         
     }
+
+    public function tambah(){
+        return view('backend.blog.tambah');
+    }
 }

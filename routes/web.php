@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\BlogController as BackendBlogController;
+use App\Http\Controllers\Backend\SliderController as BackendSliderController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\HomeController;
@@ -26,6 +27,8 @@ Route::get('/blog/detail/{slug}', [BlogController::class,'detail'])->name('blog_
 
 Route::get('/login',[LoginController::class,'index'])->name('login');
 Route::get('backend/blog',[BackendBlogController::class,'index'])->name('backend.blog');
+Route::get('backend/blog/tambah',[BackendBlogController::class,'tambah'])->name('backend.blog.tambah');
 
 Route::get('backend/slider',[SliderController::class,'index'])->name('backend.slider');
+Route::get('backend/slider/tambah',[BackendSliderController::class,'tambah'])->name('backend.slider.tambah');
 Route::get('backend/service',[ServiceController::class,'index'])->name('backend.service');
