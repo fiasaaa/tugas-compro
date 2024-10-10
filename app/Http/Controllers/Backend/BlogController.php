@@ -10,7 +10,9 @@ class BlogController extends Controller
 {
     public function index(){
         $blog=ModelBlog::get();
-        return view('backend.blog.index');
+        return view('backend.blog.index', [
+            'blog' => $blog
+        ]);
         
     }
 }

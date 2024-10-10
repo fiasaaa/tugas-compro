@@ -22,55 +22,23 @@
                                     </thead>
                                     
                                     <tbody>
-                                       
+                                    @php
+                                            $no=1;
+                                        @endphp
+                                    @foreach ($blog as $item)
                                         <tr>
-                                            <td>1</td>
-                                            <td>Content 1</td>
-                                            <td><img src="" width="200" alt="images"></td>
+                                            <td>{{$no++}}</td>
+                                            <td>{{$item->title}}</td>
+                                            <td><img src="{{asset($item->file)}}" width="200" alt="images"></td>
                                             <td>
                                                 <a href="" class="btn btn-warning">Edit</a>
                                                     <form action="" method="post" >
-                                                        
+                                                    @csrf
                                                         <button class="btn btn-danger">Hapus</button>
                                                     </form>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Content 2</td>
-                                            <td><img src="" width="200" alt="images"></td>
-                                            <td>
-                                                <a href="" class="btn btn-warning">Edit</a>
-                                                    <form action="" method="post" >
-                                                        
-                                                        <button class="btn btn-danger">Hapus</button>
-                                                    </form>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Content 3</td>
-                                            <td><img src="" width="200" alt="images"></td>
-                                            <td>
-                                                <a href="" class="btn btn-warning">Edit</a>
-                                                    <form action="" method="post" >
-                                                        
-                                                        <button class="btn btn-danger">Hapus</button>
-                                                    </form>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Content 4</td>
-                                            <td><img src="" width="200" alt="images"></td>
-                                            <td>
-                                                <a href="" class="btn btn-warning">Edit</a>
-                                                    <form action="" method="post" >
-                                                        
-                                                        <button class="btn btn-danger">Hapus</button>
-                                                    </form>
-                                            </td>
-                                        </tr>
+                                    @endforeach
                                     </tbody>
                                     
                                 </table>
