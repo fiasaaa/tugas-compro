@@ -52,4 +52,26 @@ class BlogController extends Controller
         ModelBlog::insert($data);
         return redirect()->route('backend.blog')->with('success', 'Data Berhasil Ditambahkan');
     }
+    public function edit($id) {
+        $blogs = ModelBlog::where('id', $id)->first();
+
+        return view('backend.blog.edit', compact('blogs'));
+
+    }
+    public function aksi_edit(Request $request, $id) {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'file' => 'file|mimes:jpeg,png|max:2048',
+        ]);
+        $data = [
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'slug'=>Str::slug($request->title)
+        ];
+        if($request->hasFile('file'))
+        ModelBlog::where('id',$id)->update($data);
+        return redirect()->route('backend.blog')->with('succes', 'blog berhasil ubah');
+    }
+
 }
